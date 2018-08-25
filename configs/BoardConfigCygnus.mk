@@ -10,3 +10,8 @@ PRODUCT_SOONG_NAMESPACES += \
     frameworks/av/camera/cameraserver \
     frameworks/av/services/camera/libcameraservice
 endif
+
+# Qcom-specific bits
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+include vendor/cygnus/configs/BoardConfigQcom.mk
+endif
